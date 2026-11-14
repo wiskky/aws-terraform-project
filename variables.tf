@@ -57,3 +57,39 @@ variable "private_data_subnet_az2_cidr" {
   type        = string
 }
 
+# Secret Manager
+variable "secret_name" {
+  description = "Secrets Manager secret name"
+  type        = string
+}
+
+# RDS
+variable "multi_az_deployment" {
+  description = "Enable Multi-AZ deployment"
+  type        = bool
+}
+
+variable "database_instance_identifier" {
+  description = "RDS instance identifier"
+  type        = string
+}
+
+variable "database_instance_class" {
+  description = "RDS instance class (e.g., db.t3.micro)"
+  type        = string
+}
+
+variable "database_engine" {
+  description = "Database engine (mysql, postgres, mariadb)"
+  type        = string
+}
+
+variable "database_engine_version" {
+  description = "Database engine version (e.g., 8.0.39)"
+  type        = string
+}
+
+variable "publicly_accessible" {
+  description = "Make RDS publicly accessible"
+  type        = bool
+}

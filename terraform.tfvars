@@ -13,6 +13,14 @@ private_app_subnet_az2_cidr  = "10.0.3.0/24"
 private_data_subnet_az1_cidr = "10.0.4.0/24"
 private_data_subnet_az2_cidr = "10.0.5.0/24"
 
+# Security group
 # Secrets Manager
-# secret_name = "dev-secrets"    # copy from your secret manager
+secret_name = "dev-nest-secrets"    # copy from your secret manager. You must manually created it
 
+# RDS
+multi_az_deployment          = false
+database_instance_identifier = "app-db"
+database_instance_class      = "db.t3.micro"
+database_engine              = "mysql"
+database_engine_version      = "8.4.9"
+publicly_accessible          = false
